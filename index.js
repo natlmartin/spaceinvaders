@@ -100,7 +100,7 @@ const fire = () => {
         state.score++
         state.scoreElement.innerText = state.score
         setTimeout(() => {
-            state.cells[laserPosition]classList.remove('hit)')
+            state.cells[laserPosition].classList.remove('hit)')
         }, 200)
         return
     }
@@ -221,14 +221,14 @@ const drawScoreboard = () => {
     const heading3 = document.createElement('h3')
     heading3.innerText = 'Score: '
     heading3.append(scoreElement)
-    scoreboard.append(heaidng, paragraph1, paragraph2, heading3)
+    scoreboard.append(heading, paragraph1, paragraph2, heading3)
 
     state.scoreElement = scoreElement
     state.element.append(scoreboard)
 }
 
 //query the page for the place to insert my game
-const appElement = document.quarySelector('.app')
+const appElement = document.querySelector('.app')
 
 //do all things needed to draw the game
 setupGame(appElement)
