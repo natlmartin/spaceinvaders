@@ -84,7 +84,7 @@ const fire = () => {
     // remove the laser image
     state.cells[laserPosition].classList.remove('laser')
     // decrease (move up a row) the laser position
-    laserPosition-= 15
+    laserPosition = 15
     // check we are still in bounds
     if (laserPosition < 0) {
         clearInterval(interval)
@@ -101,7 +101,7 @@ const fire = () => {
         state.score++
         state.scoreElement.innerText = state.score
         setTimeout(() => {
-            state.cells[laserPosition].classList.remove('hit)')
+            state.cells[laserPosition].classList.remove('hit')
         }, 200)
         return
     }
