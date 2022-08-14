@@ -90,6 +90,8 @@ const fire = () => {
         clearInterval(interval)
         return
     }
+  }
+}
 
     // if there is an alien BOOM!
     // clear the interval, remove alience image, remove alien from alien positions, add the boom image, set a timeout to remove the boom image
