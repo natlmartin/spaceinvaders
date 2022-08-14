@@ -107,7 +107,7 @@ const fire = () => {
 
     // add the laser image
     state.cells[laserPosition].classList.add('laser')
-  }, 100)
+  }, 100
 }
 
 const drawAliens = () => {
@@ -156,7 +156,7 @@ interval = setInterval() => {
     drawAliens()
     // check game state (and stop aliens and ship)
     checkGameState(interval)
-  }, 400)
+  }, 400
         //set up ship controls
         window.addEventListener('keydown', controlShip)
   }
