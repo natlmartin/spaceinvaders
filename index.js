@@ -80,7 +80,7 @@ const fire = () => {
     let interval
     // laser starts at the ship position
     let laserPosition = state.shipPosition
-    interval = setInterval()) => {
+    interval = setInterval() = {
     // remove the laser image
     state.cells[laserPosition].classList.remove('laser')
     // decrease (move up a row) the laser position
