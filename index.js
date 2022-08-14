@@ -10,7 +10,7 @@ const state = {
     48,49,50,51,52,53,54,55,56
       ],
     gameover: false,
-    state.score: 0
+    score: 0
 }
 
 const setupGame = (element) => {
@@ -30,7 +30,7 @@ const drawGrid = () => {
     const grid = document.createElement('div')
     grid.classList.add('grid')
     // create a lot of cells = 15x15 (225)
-    for (let i-0; i<state.numCells; i++) {
+    for (let i=0; i<state.numCells; i++) {
         // create a cell
         const cell = document.createElement('div')
         // append the cell to the grid
@@ -42,8 +42,9 @@ const drawGrid = () => {
     state.element.append(grid)
 }
 
-// find the current position 
+
   const drawShip = () => {
+    // find the current position 
     // find the bottom row, middle cell, add a bg image
     state.cells[state.shipPosition].classList.add('spaceship')
 }
@@ -59,6 +60,7 @@ const controlShip = (event) => {
   // if space
   } else if (event.code === 'Space') {
       fire ()
+  }
 }
 
 const moveShip = (direction) => {
@@ -83,7 +85,7 @@ const fire = () => {
     // remove the laser image
     state.cells[laserPosition].classList.remove('laser')
     // decrease (move up a row) the laser position
-    laserPosition = 15
+    laserPosition-= 15
     // check we are still in bounds
     if (laserPosition < 0) {
         clearInterval(interval)
@@ -120,7 +122,7 @@ const drawAliens = () => {
         // add the image to the cell if the index is in an alien position
         if (state.alienPositions.includes(index)) {
             cell.classList.add('alien')
-        }, 
+        } 
     })
 }
 
@@ -156,11 +158,10 @@ interval = setInterval() => {
     drawAliens()
     // check game state (and stop aliens and ship)
     checkGameState(interval)
-  }, 400
+  } 300
         //set up ship controls
         window.addEventListener('keydown', controlShip)
   }
-}
 
 const atEdge = (side ) => {
     if (side === 'left') {
