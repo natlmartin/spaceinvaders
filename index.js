@@ -78,7 +78,7 @@ const fire = () => {
     // use an interval: run some code repeatedly each time after a specified time
     let interval
     // laser starts at the ship position
-    let laserPosition = start.shipPosition
+    let laserPosition = state.shipPosition
     interval = setInterval() => {
     // remove the laser image
     state.cells[laserPosition].classList.remove('laser')
